@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Employee Info Page</h1>
+<table>
+
+<tr>
+<td><label>Enter Emp ID : </label></td>
+<td><input type="text" id="empid"/></td>
+</tr>
+
+<tr>
+<td><label>Enter Emp Name : </label></td>
+<td><input type="text" id="empname"/></td> 
+</tr>
+
+<tr>
+<td><label>Enter Emp Role : </label></td>
+<td><input type="text" id="emprole"/></td> 
+</tr>
+
+<tr>
+<td><label>Enter Emp Company : </label></td>
+<td><input type="text" id="empcomp"/></td> 
+</tr>
+
+</table>
+<script type="text/javascript">
+document.getElementById("mybtn").onclick=function()
+{
+	//1) create an XMLHttpRequest Object
+	var xmlHttp;
+	if(window.XMLHttpRequest)
+		 xmlHttp = new XMLHttpRequest();
+	
+	//2) Build URL to connection
+	var name=document.getElementById("empid").value;
+	var url="employeeDetails.jsp?empid="+empid;
+	
+	//3) Open a connection to the server
+	//method,url,async,username,password
+	xmlHttp.open("GET",url,true);
+	
+	//4)Setup a call back handler to handle response.
+	xmlHttp.onreadystatechange = responseHandler;
+	
+	//5)Send the request
+	xmlHttp.send();// give null if not work
+	
+	
+	//6) Process the rsponse in the call back Handler
+	function responseHandler()
+	{
+		if(xmlHttp.readyState==4 && xmlHttp.status==200)
+			var res=xmlHttp.responseText;
+		var empdet=res.split(",");
+		document.getElementById("empname").value=empdet[0];
+		document.getElementById("emprole").value=empdet[1];
+		document.getElementById("empcmpny").value=empdet[3];
+	}
+}
+</script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	#myDiv{
+		height : 100px;
+		width : 100px;
+		border : solid 2px teal;
+		background-color : teal;
+		position : relative;
+		margin: 10px
+	}
+</style>
+</head>
+<body>
+<h1> Intro to js</h1>
+
+<!-- <script type="text/javascript">
+	alert("Internal way to include js");
+</script> -->
+
+<h1 id="page-heading">DOM Events in JS</h1>
+<!-- <div id = "myDiv">
+	<p id = "para1"> This is first paragraph </p>
+	<img id = "img1" src = "scripts\Chrysanthemum.jpg" alt ="Not loading">
+	
+</div>
+<button id="btn1">Click</button>
+<button id="addPara">Add Paragraph</button>
+<button id="addAtBegPara">start Paragraph</button>
+<button id="linkBtn">CreateGoogleLink</button>
+-->
+<!-- 
+<style>
+	#div1 {
+		width : 200px;
+		height : 200px;
+		margin : 20px;
+		border : solid 2px blue;
+		background-color : lightblue;
+	}
+	#div2 {
+		width : 100px;
+		height : 100px;
+		border : solid 2px teal;
+		background-color : #FFCCCC;
+	}
+</style>
+
+
+<div id ="div1">
+	<div id="div2">
+		<button id="myBtn"> Click</button>
+	</div>
+</div>
+ -->
+<!-- <button id="btn">Clear</</button> -->
+
+
+<!-- 
+<div id = "myDiv">
+
+</div>
+
+<script type="text/javascript">
+setTimeout(function () {
+					alert("in function timeout");
+				},3000);
+
+var as = setInterval( function () {
+					alert("In interval timer")
+				}, 2000);
+</script>
+
+<script type="text/javascript">
+window.onload = function() {
+	setInterval(increaseWidth, 2000);
+	w = 100;
+	function increaseWidth() {
+		document.getElementById("myDiv").style.width = w + "px";
+		w = w + 50;		
+	}
+	document.getElementById("myDiv").onclick = function() {
+		document.getElementById("myDiv").style.width = w + "px";
+		w = w - 60;
+	}
+}
+document.getElementById("myDiv").onclick = function() {
+	document.getElementById("myDiv").style.width = w + "px";
+	w = w - 60;
+}
+ 
+</script>
+-->
+
+<!-- 
+<label> Enter your name :  </label>
+<input type="text" id ="uname"></input>
+<button id = "myBtn"> Welcome</button>
+<button id = "btn2"> Click</button>
+ -->
+<h1>Employee details page : </h1>
+<table>
+	<tr><td><label>Enter emp ID : </label></td>
+		<td><input type="text" id="empid"/></td>
+	</tr>
+	<tr><td><label>Enter Name : </label></td>
+		<td><input type="text" id="empname"/></td>
+	</tr>
+	<tr><td><label>Enter Role : </label></td>
+		<td><input type="text" id="emprole"/></td>
+	</tr>
+	<tr><td><label>Enter  Company: </label></td>
+		<td><input type="text" id="empcomp"/></td>
+	</tr>
+	
+</table>
+<script type="text/javascript" src = "scripts/ajaxXml.js"></script>
+
+<!-- <script type="text/javascript" src = "scripts/ajaxXml.js"></script> -->
+<!-- <script type="text/javascript" src = "scripts/ajaxPost.js"></script> -->
+<!-- <script type="text/javascript" src = "scripts/ajaxGet.js"></script> -->
+<!-- 
+<script type = "text/javascript">
+	document.getElementById("myBtn").onclick = function() {
+		
+		//Create an XMLHttpRequest object
+		var xmlHttp;
+		if(window.XMLHttpRequest) {
+			xmlHttp =  new XMLHttpRequest();
+		}else {
+			// for older browsers basically IE
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		
+		//Build URL
+		var uname = document.getElementById("uname").value;
+		var url = "welcomeuser.jsp?name="+uname;
+		
+		//Open connection 
+		xmlHttp.open("GET", url, true);
+		
+		//Setup callback handler
+		xmlHttp.onreadystatechange = responseHandler;
+
+		
+		//Send the request
+		xmlHttp.send();
+		
+		//Process the response using callback handler
+		function responseHandler() {
+			if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {	//received usable response && successfully
+				alert(xmlHttp.responseText);
+			}
+		}		
+	}
+</script>
+ -->
+<!-- <script type="text/javascript" src = "scripts/basicJS.js" async>
+	
+	//this gets ignored
+	alert("Testing code...");
+
+</script> -->
+
+</body>
+</html>

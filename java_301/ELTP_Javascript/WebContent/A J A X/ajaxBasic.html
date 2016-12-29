@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Intro to AJAX</h1>
+<label>Enter user Name: </label>
+<input type="text" id="name">
+<button id="mybtn">Welcome User</button>
+<script type="text/javascript">
+document.getElementById("mybtn").onclick=function()
+{
+	//1) create an XMLHttpRequest Object
+	var xmlHttp;
+	
+	if(window.XMLHttpRequest)
+		{
+		 xmlHttp = new XMLHttpRequest();
+		}
+	else
+		{
+		//Older version of IE
+		new ActiveXObject("Microsoft.XMLHttp");
+		}
+	
+	//2) Build URL to connection
+	var name=document.getElementById("name").value;
+	var url="welcome.jsp?name="+name;
+	
+	//3) Open a connection to the server
+	
+	//method,url,async,username,password
+	xmlHttp.open("GET",url,true);
+	
+	//4)Setup a call back handler to handle response.
+	xmlHttp.onreadystatechange = responseHandler;
+	
+	//5)Send the request
+	xmlHttp.send();// give null if not work
+			
+	
+	//6) Process the rsponse in the call back Handler
+	function responseHandler()
+	{
+		// to check that we have received our response from server correclty and it is
+		// readyn to be used in out webpage
+		if(xmlHttp.readyState==4 && xmlHttp.status==200)
+			alert(xmlHttp.responseText);
+	}
+}
+</script>
+</body>
+</html>
