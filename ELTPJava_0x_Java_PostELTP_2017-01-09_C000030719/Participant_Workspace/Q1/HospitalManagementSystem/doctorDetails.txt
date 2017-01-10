@@ -1,0 +1,7 @@
+101,Ram Kapoor,ENT,MONDAY:WEDNESDAY,250.00
+102,Dev Dixit,General Physician,MONDAY:TUESDAY:WEDNESDAY,300.00
+103,Kavita Patil,Nutritionist,MONDAY:WEDNESDAY:FRIDAY,500.00
+104,Karan Kumar,MD Medicine,MONDAY:THURSDAY,600.00
+105,Madhura Karnik,General Physician,MONDAY:WEDNESDAY:FRIDAY,300.00
+106,Shamprasad Varma,General Physician,MONDAY:WEDNESDAY:FRIDAY,250.00
+107,Rama Bhosale,Orthopedic Surgeon,TUESDAY:THURSDAY,500.00
